@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     concurrency:
       group: firmware-build
       cancel-in-progress: true
