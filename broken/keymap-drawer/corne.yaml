@@ -1,0 +1,150 @@
+layout: {zmk_keyboard: corne, layout_name: five_column_transform}
+layers:
+  base:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - A
+  - '&hml LALT S'
+  - '&hml LGUI D'
+  - '&hml LCTRL F'
+  - G
+  - H
+  - '&hmr RCTRL J'
+  - '&hmr RGUI K'
+  - '&hmr RALT L'
+  - ;
+  - '&hml LSHIFT Z'
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - '&hmr RSHIFT FSLH'
+  - fn
+  - ⮐
+  - {t: Esc, h: number}
+  - BSPC
+  - $$mdi:keyboard-space$$
+  - number
+  number:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - \
+  - '&hml LALT MINUS'
+  - '&hml LGUI LBKT'
+  - '&hml LCTRL RBKT'
+  - {t: number, h: '$$mdi:toggle-switch$$'}
+  - $$mdi:arrow-left$$
+  - '&hmr RCTRL DOWN'
+  - '&hmr RGUI UP'
+  - '&hmr RALT RIGHT'
+  - ''''
+  - $$mdi:apple-keyboard-shift$$
+  - '`'
+  - F11
+  - F12
+  - {t: base, h: '$$mdi:toggle-switch$$'}
+  - ''
+  - '='
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$mdi:keyboard-tab$$
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  fn:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - End
+  - '&hml LALT PG_UP'
+  - '&hml LGUI PG_DN'
+  - '&hml LCTRL HOME'
+  - {t: fn, h: '$$mdi:toggle-switch$$'}
+  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
+  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
+  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
+  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
+  - ''
+  - $$mdi:apple-keyboard-shift$$
+  - '&td0'
+  - '&td1'
+  - '&td2'
+  - {t: base, h: '$$mdi:toggle-switch$$'}
+  - '&msc SCRL_LEFT'
+  - $$mdi:mouse-move-down$$
+  - $$mdi:mouse-move-up$$
+  - '&msc SCRL_RIGHT'
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$mdi:cursor-default-click-outline$$
+  - $$mdi:cursor-default-click$$
+  - {t: ▽, type: trans}
+  board:
+  - {t: '$$mdi:flash$$', h: '$$mdi:new-box$$', s: '$$mdi:micro-sd$$', type: sym_by_sym}
+  - ''
+  - ''
+  - ''
+  - {t: '$$mdi:bluetooth-settings$$', h: '$$mdi:asterisk$$', s: '$$mdi:close-thick$$', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:close-thick$$', type: sym_sub_text}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: '$$mdi:keyboard$$', s: '$$mdi:usb$$', type: sym_by_sym}
+  - {t: '$$mdi:keyboard$$', s: '$$mdi:bluetooth$$', type: sym_by_sym}
+  - ''
+  - {t: '$$mdi:bluetooth-connect$$', s: '0', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '1', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '2', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '3', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '4', type: sym_sub_text}
+  - '&studio_unlock'
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: '$$mdi:bluetooth-off$$', s: '0', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-off$$', s: '1', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-off$$', s: '2', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-off$$', s: '3', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-off$$', s: '4', type: sym_sub_text}
+  - {type: held}
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
