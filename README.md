@@ -1,10 +1,12 @@
-![Build workflow](https://github.com/notaduck/zmk-chocofi-config/actions/workflows/build.yml/badge.svg)
+Based off https://github.com/beekeeb/zmk-config-corne-chocofi-with-niceview and https://github.com/Notaduck/zmk-chocofi-config
+
+![Build workflow](https://github.com/escapewindow/zmk-chocofi-config/actions/workflows/build.yml/badge.svg)
 
 # Chocofi 36-Key Keyboard ZMK Configuration
 
 This repository contains my [ZMK firmware](https://github.com/zmkfirmware/zmk/) configuration for the [Chocofi](https://github.com/pashutk/chocofi) keyboard. The Chocofi is a split keyboard featuring 3 rows, 5 columns, and 3 thumb keys per half, totaling 36 keys.
 
-# Keymap 
+# Keymap
 
 ![](keymap-drawer/corne.svg)
 

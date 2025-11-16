@@ -1,5 +1,12 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main  # Specify your main branch
+  pull_request:
+    branches:
+      - main  # Specify your main branch
+  workflow_dispatch:  # can be triggered manually
 
 jobs:
   build:
@@ -7,3 +14,14 @@ jobs:
     concurrency:
       group: firmware-build
       cancel-in-progress: true
+  draw:
+    needs: build
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      keymap_patterns: "config/corne.keymap"        # path to the keymaps to parse
+      config_path: "keymap-drawer/config.yaml"  # config file, ignored if not exists
+      output_folder: "keymap-drawer"            # path to save produced SVG and keymap YAML files
+      parse_args: ""  # map of extra args to pass to `keymap parse`
+      draw_args: ""   # map of extra args to pass to `keymap draw`
