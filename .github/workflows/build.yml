@@ -7,6 +7,12 @@ on:
     branches:
       - main  # Specify your main branch
   workflow_dispatch:  # can be triggered manually
+  archive_name:
+    description: "Archive output file name"
+    default: "zmk-chocofi-firmware"
+    required: false
+    type: string
+
 
 jobs:
   build:
