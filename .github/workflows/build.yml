@@ -9,14 +9,16 @@ on:
   workflow_dispatch:  # can be triggered manually
 
 
+env:
+  archive_name: "zmk-chocofi-firmware"
+
+
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     concurrency:
       group: firmware-build
       cancel-in-progress: true
-    with:
-      archive_name: "zmk-chocofi-firmware"
   draw:
     needs: build
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
