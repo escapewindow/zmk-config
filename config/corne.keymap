@@ -66,9 +66,9 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* left-hand HRM shift */
 ZMK_BEHAVIOR(hml_s, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <125>;
     quick-tap-ms = <125>;                // repeat on tap-into-hold
-    require-prior-idle-ms = <100>;         // requires PR #1387
+//    require-prior-idle-ms = <100>;         // requires PR #1387
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
     // hold-trigger-on-release;             // delay positional check until key-release
@@ -77,9 +77,9 @@ ZMK_BEHAVIOR(hml_s, hold_tap,
 /* right-hand HRM shift */
 ZMK_BEHAVIOR(hmr_s, hold_tap,
     flavor = "balanced";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <125>;
     quick-tap-ms = <125>;                // repeat on tap-into-hold
-    require-prior-idle-ms = <100>;         // requires PR #1387
+//    require-prior-idle-ms = <100>;         // requires PR #1387
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
     // hold-trigger-on-release;             // delay positional check until key-release
