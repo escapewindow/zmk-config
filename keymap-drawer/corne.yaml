@@ -1,42 +1,7 @@
 layout: {zmk_keyboard: corne, layout_name: five_column_transform}
 layers:
-  base:
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - A
-  - '&hml LALT S'
-  - '&hml LGUI D'
-  - '&hml LCTRL F'
-  - G
-  - H
-  - '&hmr RCTRL J'
-  - '&hmr RGUI K'
-  - '&hmr RALT L'
-  - ;
-  - '&hml_s LSHIFT Z'
-  - X
-  - C
-  - V
-  - B
-  - N
-  - M
-  - ','
-  - .
-  - '&hmr_s RSHIFT FSLH'
-  - {t: '$$mdi:keyboard-tab$$', h: number}
-  - ⮐
-  - '&hmr 2 ESC'
-  - '&hmr 1 BSPC'
-  - $$mdi:keyboard-space$$
-  - {t: '''', h: fn}
+  base: [Q, W, E, R, T, Y, U, I, O, P, A, '&hml LALT S', '&hml LGUI D', '&hml LCTRL F', G, H, '&hmr RCTRL J', '&hmr RGUI K', '&hmr RALT L', ;, '&hml_s LSHIFT Z',
+    X, C, V, B, N, M, ',', ., '&hmr_s RSHIFT FSLH', '&hml_s 1 TAB', ⮐, '&hml_s 2 ESC', '&hmr_s 1 BSPC', '$$mdi:keyboard-space$$', '&hmr_s 2 APOS']
   number:
   - '1'
   - '2'
@@ -68,7 +33,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-tab$$', type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -110,7 +75,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:cursor-default-click-outline$$
-  - {t: '$$mdi:cursor-default-click$$', type: held}
+  - $$mdi:cursor-default-click$$
   board:
   - {t: '$$mdi:flash$$', h: '$$mdi:new-box$$', s: '$$mdi:micro-sd$$', type: sym_by_sym}
   - ''
@@ -142,9 +107,9 @@ layers:
   - {t: '$$mdi:bluetooth-off$$', s: '2', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-off$$', s: '3', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-off$$', s: '4', type: sym_sub_text}
-  - {type: held}
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - {type: held}
+  - ''
