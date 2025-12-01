@@ -33,8 +33,8 @@ layers:
   - '&hmr_s RSHIFT FSLH'
   - {t: '$$mdi:keyboard-tab$$', h: number}
   - ⮐
-  - {t: Esc, h: fn}
-  - {t: BSPC, h: number}
+  - '&hmr 2 ESC'
+  - '&hmr 1 BSPC'
   - $$mdi:keyboard-space$$
   - {t: '''', h: fn}
   number:
@@ -107,10 +107,10 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:cursor-default-click-outline$$
-  - $$mdi:cursor-default-click$$
+  - {t: '$$mdi:cursor-default-click$$', type: held}
   board:
   - {t: '$$mdi:flash$$', h: '$$mdi:new-box$$', s: '$$mdi:micro-sd$$', type: sym_by_sym}
   - ''
@@ -144,7 +144,7 @@ layers:
   - {t: '$$mdi:bluetooth-off$$', s: '4', type: sym_sub_text}
   - {type: held}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - ''
+  - {type: held}
