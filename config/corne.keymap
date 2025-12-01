@@ -65,9 +65,9 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
 /* left-hand HRM shift */
 ZMK_BEHAVIOR(hml_s, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <125>;
-    quick-tap-ms = <125>;                // repeat on tap-into-hold
+    flavor = "hold-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <150>;                // repeat on tap-into-hold
 //    require-prior-idle-ms = <100>;         // requires PR #1387
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
@@ -76,9 +76,9 @@ ZMK_BEHAVIOR(hml_s, hold_tap,
 
 /* right-hand HRM shift */
 ZMK_BEHAVIOR(hmr_s, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <125>;
-    quick-tap-ms = <125>;                // repeat on tap-into-hold
+    flavor = "hold-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <150>;                // repeat on tap-into-hold
 //    require-prior-idle-ms = <100>;         // requires PR #1387
     bindings = <&kp>, <&kp>;
     hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
@@ -176,7 +176,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
              &hml_s LSHIFT Z     &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hmr_s RSHIFT FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
-                                            &lt NUM TAB    &kp RETURN    &lt FN ESC       &lt NUM BSPC   &kp SPACE    &lt FN APOS
+                                            &lt NUM TAB    &kp RETURN    &hmr FN ESC      &hmr NUM BSPC  &kp SPACE    &lt FN APOS
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
       >;
     };
