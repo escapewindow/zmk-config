@@ -65,23 +65,23 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
 /* left-hand HRM shift */
 ZMK_BEHAVIOR(hml_s, hold_tap,
-    flavor = "balanced";
+    flavor = "hold-preferred";
     tapping-term-ms = <125>;
-    quick-tap-ms = <125>;                // repeat on tap-into-hold
+    //quick-tap-ms = <125>;                // repeat on tap-into-hold
 //    require-prior-idle-ms = <100>;         // requires PR #1387
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
+    //hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
     // hold-trigger-on-release;             // delay positional check until key-release
 )
 
 /* right-hand HRM shift */
 ZMK_BEHAVIOR(hmr_s, hold_tap,
-    flavor = "balanced";
+    flavor = "hold-preferred";
     tapping-term-ms = <125>;
-    quick-tap-ms = <125>;                // repeat on tap-into-hold
+    //quick-tap-ms = <125>;                // repeat on tap-into-hold
 //    require-prior-idle-ms = <100>;         // requires PR #1387
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
+    //hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
     // hold-trigger-on-release;             // delay positional check until key-release
 )
 
@@ -176,7 +176,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
              &hml_s LSHIFT Z     &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hmr_s RSHIFT FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
-                                            &lt NUM TAB    &kp RETURN    &lt FN ESC       &lt NUM BSPC   &kp SPACE    &lt FN APOS
+                                           &hml_s NUM TAB    &kp RETURN &hml_s FN ESC     &hmr_s NUM BSPC &kp SPACE  &hmr_s FN APOS
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
       >;
     };
@@ -193,7 +193,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // |    LSHIFT     |        `      | Search / F11 |  Dock / F12   |    BASE     |   |   None   |      =        |            |               |                 |
              &kp LSHIFT        &kp GRAVE       &kp F11         &kp F12       &to BASE            _x_       &kp EQUAL        ___             ___             ___
         // |---------------|---------------|--------------|---------------|-------------|   |----------|---------------|------------|---------------|-----------------|
-                                               &kp TAB           ___            ___              ___         ___            ___
+                                                  ___            ___            ___              ___         ___            ___
         //                                 |--------------|---------------|-------------|   |----------|---------------|------------|
       >;
     };
