@@ -174,7 +174,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
              &hml_s LSHIFT Z     &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hmr_s RSHIFT FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
-                                           &mt NUM TAB    &kp RETURN &mt FN ESC     &mt NUM BSPC &kp SPACE  &mt FN APOS
+                                           &lt NUM TAB    &kp RETURN &lt FN ESC     &lt NUM BSPC &kp SPACE  &lt FN APOS
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
       >;
     };
