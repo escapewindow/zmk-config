@@ -48,7 +48,6 @@ ZMK_BEHAVIOR(hml, hold_tap,
     quick-tap-ms = <QUICK_TAP_MS>;
     require-prior-idle-ms = <PRIOR_IDLE_MS>;
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
     hold-trigger-on-release;
 )
 
@@ -59,7 +58,6 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     quick-tap-ms = <QUICK_TAP_MS>;
     require-prior-idle-ms = <PRIOR_IDLE_MS>;
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
     hold-trigger-on-release;
 )
 
@@ -176,7 +174,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
              &hml_s LSHIFT Z     &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hmr_s RSHIFT FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
-                                           &hml_s NUM TAB    &kp RETURN &hml_s FN ESC     &hmr_s NUM BSPC &kp SPACE  &hmr_s FN APOS
+                                           &mt NUM TAB    &kp RETURN &mt FN ESC     &mt NUM BSPC &kp SPACE  &mt FN APOS
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
       >;
     };
