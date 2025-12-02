@@ -111,7 +111,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
       tapping-term-ms = <280>;
-      quick-tap-ms = <QUICK_TAP_MS>; 
+      quick-tap-ms = <QUICK_TAP_MS>;
       bindings = <&kp>, <&kp>;
       // label = "HOMEROW_MODS";
       #binding-cells = <2>;
