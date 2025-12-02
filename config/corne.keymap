@@ -41,6 +41,51 @@
 //     mods = <(MOD_LSFT)>;
 // )
 
+/* left-hand HRMs */
+ZMK_BEHAVIOR(hml, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM_MS>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    require-prior-idle-ms = <PRIOR_IDLE_MS>;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
+    hold-trigger-on-release;
+)
+
+/* right-hand HRMs */
+ZMK_BEHAVIOR(hmr, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM_MS>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    require-prior-idle-ms = <PRIOR_IDLE_MS>;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
+    hold-trigger-on-release;
+)
+
+/* left-hand HRM shift */
+ZMK_BEHAVIOR(hml_s, hold_tap,
+    flavor = "hold-preferred";
+    tapping-term-ms = <125>;
+    //quick-tap-ms = <125>;                // repeat on tap-into-hold
+//    require-prior-idle-ms = <100>;         // requires PR #1387
+    bindings = <&kp>, <&kp>;
+    //hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
+    // hold-trigger-on-release;             // delay positional check until key-release
+)
+
+/* right-hand HRM shift */
+ZMK_BEHAVIOR(hmr_s, hold_tap,
+    flavor = "hold-preferred";
+    tapping-term-ms = <125>;
+    //quick-tap-ms = <125>;                // repeat on tap-into-hold
+//    require-prior-idle-ms = <100>;         // requires PR #1387
+    bindings = <&kp>, <&kp>;
+    //hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
+    // hold-trigger-on-release;             // delay positional check until key-release
+)
+
+
 / {
   chosen {
     zmk,matrix_transform = &five_column_transform;
@@ -67,13 +112,14 @@
     hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
-      #binding-cells = <2>;
-      hold-trigger-on-release;
-      tapping-term-ms = <TAPPING_TERM_MS>;
-      quick-tap-ms = <QUICK_TAP_MS>;
-      require-prior-idle-ms = <PRIOR_IDLE_MS>;
+      tapping-term-ms = <280>;
+      quick-tap-ms = <QUICK_TAP_MS>; 
       bindings = <&kp>, <&kp>;
+      // label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      // hold-trigger-key-positions = <TRIGGER_POS>;
       hold-trigger-on-release;
+
     };
     SBD: S_BSPC_DEL {
       compatible = "zmk,behavior-mod-morph";
@@ -125,12 +171,12 @@
               &kp Q            &kp W          &kp E         &kp R         &kp T             &kp Y       &kp U         &kp I          &kp O              &kp P
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
         // |     A         |      S       |     D       |      F       |     G       |   |     H     |      J       |     K       |     L        |         ;        |
-              &kp A          &hm LALT S    &hm LGUI D   &hm LCTRL F    &kp G             &kp H      &hm RCTRL J   &hm RGUI K    &hm RALT L        &kp SEMI
+              &kp A          &hml LALT S    &hml LGUI D   &hml LCTRL F    &kp G             &kp H      &hmr RCTRL J   &hmr RGUI K    &hmr RALT L        &kp SEMI
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
-             &hm_s LSHIFT Z     &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hm_s RSHIFT FSLH
+             &hml_s LSHIFT Z     &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hmr_s RSHIFT FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
-                                           &hm NUM TAB    &kp RETURN &hm FN ESC     &hm NUM BSPC &kp SPACE  &hm FN APOS
+                                           &hml_s NUM TAB    &kp RETURN &hml_s FN ESC     &hmr_s NUM BSPC &kp SPACE  &hmr_s FN APOS
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
       >;
     };
@@ -142,7 +188,7 @@
                &kp N1            &kp N2         &kp N3         &kp N4        &kp N5           &kp N6       &kp N7        &kp N8          &kp N9            &kp N0
         // |---------------|---------------|--------------|---------------|-------------|   |----------|---------------|------------|---------------|-----------------|
         // |      \        |        -      |      [       |       ]       | Lock Layer  |   |   Left   |      Down     |     Up     |     Right     |        '        |
-               &kp BSLH    &hm LALT MINUS &hm LGUI LBKT &hm LCTRL RBKT    &tog NUM        &kp LEFT  &hm RCTRL DOWN &hm RGUI UP &hm RALT RIGHT      &kp APOS
+               &kp BSLH    &hml LALT MINUS &hml LGUI LBKT &hml LCTRL RBKT    &tog NUM        &kp LEFT  &hmr RCTRL DOWN &hmr RGUI UP &hmr RALT RIGHT      &kp APOS
         // |---------------|---------------|--------------|---------------|-------------|   |----------|---------------|------------|---------------|-----------------|
         // |    LSHIFT     |        `      | Search / F11 |  Dock / F12   |    BASE     |   |   None   |      =        |            |               |                 |
              &kp LSHIFT        &kp GRAVE       &kp F11         &kp F12       &to BASE            _x_       &kp EQUAL        ___             ___             ___
@@ -159,7 +205,7 @@
                &kp F1            &kp F2         &kp F3         &kp F4        &kp F5             &kp F6       &kp F7        &kp F8          &kp F9           &kp F10
         // |---------------|---------------|--------------|---------------|-------------|   |------------|---------------|------------|---------------|-----------------|
         // |     End       |      PgUp     |     PgDn     |     Home      | Lock Layer  |   | Mouse Left |   Mouse Down  |  Mouse Up  |  Mouse Right  |                 |
-               &kp END      &hm LALT PG_UP &hm LGUI PG_DN &hm LCTRL HOME    &tog FN        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT     _x_
+               &kp END      &hml LALT PG_UP &hml LGUI PG_DN &hml LCTRL HOME    &tog FN        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT     _x_
         // |---------------|---------------|--------------|---------------|-------------|   |------------|---------------|------------|---------------|-----------------|
         // |    LSHIFT     |    Vol-;Prev  |   Mute;Play  |  Vol+;FF      |    BASE     |   |            |               |            |               |                 |
              &kp LSHIFT           &td0           &td1          &td2          &to BASE        &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT     _x_
