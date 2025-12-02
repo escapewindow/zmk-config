@@ -41,7 +41,7 @@
 //     mods = <(MOD_LSFT)>;
 // )
 
-ZMK_BEHAVIOR(hmc, hold_tap,
+ZMK_BEHAVIOR(hm, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
@@ -52,7 +52,7 @@ ZMK_BEHAVIOR(hmc, hold_tap,
 )
 
 /* shift */
-ZMK_BEHAVIOR(hmc_s, hold_tap,
+ZMK_BEHAVIOR(hm_s, hold_tap,
     flavor = "hold-preferred";
     tapping-term-ms = <125>;
     //quick-tap-ms = <125>;                // repeat on tap-into-hold
@@ -84,7 +84,7 @@ ZMK_BEHAVIOR(hmc_s, hold_tap,
 
   };
   behaviors {
-    hmc: homerow_mods {
+    hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
       tapping-term-ms = <280>;
@@ -146,10 +146,10 @@ ZMK_BEHAVIOR(hmc_s, hold_tap,
               &kp Q            &kp W          &kp E         &kp R         &kp T             &kp Y       &kp U         &kp I          &kp O              &kp P
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
         // |     A         |      S       |     D       |      F       |     G       |   |     H     |      J       |     K       |     L        |         ;        |
-              &kp A          &hmc LALT S    &hm LGUI D   &hm LCTRL F    &kp G             &kp H      &hm RCTRL J   &hm RGUI K    &hm RALT L        &kp SEMI
+              &kp A          &hm LALT S    &hm LGUI D   &hm LCTRL F    &kp G             &kp H      &hm RCTRL J   &hm RGUI K    &hm RALT L        &kp SEMI
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
-             &hmc_s LSHIFT Z     &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hm_s RSHIFT FSLH
+             &hm_s LSHIFT Z     &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hm_s RSHIFT FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
                                             &mt NUM TAB   &kp RETURN     &mt FN ESC       &mt NUM BSPC  &kp SPACE     &mt FN APOS
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
@@ -163,7 +163,7 @@ ZMK_BEHAVIOR(hmc_s, hold_tap,
                &kp N1            &kp N2         &kp N3         &kp N4        &kp N5           &kp N6       &kp N7        &kp N8          &kp N9            &kp N0
         // |---------------|---------------|--------------|---------------|-------------|   |----------|---------------|------------|---------------|-----------------|
         // |      \        |        -      |      [       |       ]       | Lock Layer  |   |   Left   |      Down     |     Up     |     Right     |        '        |
-               &kp BSLH    &hmc LALT MINUS &hm LGUI LBKT &hm LCTRL RBKT    &tog NUM        &kp LEFT  &hm RCTRL DOWN &hm RGUI UP &hm RALT RIGHT      &kp APOS
+               &kp BSLH    &hm LALT MINUS &hm LGUI LBKT &hm LCTRL RBKT    &tog NUM        &kp LEFT  &hm RCTRL DOWN &hm RGUI UP &hm RALT RIGHT      &kp APOS
         // |---------------|---------------|--------------|---------------|-------------|   |----------|---------------|------------|---------------|-----------------|
         // |    LSHIFT     |        `      | Search / F11 |  Dock / F12   |    BASE     |   |   None   |      =        |            |               |                 |
              &kp LSHIFT        &kp GRAVE       &kp F11         &kp F12       &to BASE            _x_       &kp EQUAL        ___             ___             ___
@@ -180,7 +180,7 @@ ZMK_BEHAVIOR(hmc_s, hold_tap,
                &kp F1            &kp F2         &kp F3         &kp F4        &kp F5             &kp F6       &kp F7        &kp F8          &kp F9           &kp F10
         // |---------------|---------------|--------------|---------------|-------------|   |------------|---------------|------------|---------------|-----------------|
         // |     End       |      PgUp     |     PgDn     |     Home      | Lock Layer  |   | Mouse Left |   Mouse Down  |  Mouse Up  |  Mouse Right  |                 |
-               &kp END      &hmc LALT PG_UP &hm LGUI PG_DN &hm LCTRL HOME    &tog FN        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT     _x_
+               &kp END      &hm LALT PG_UP &hm LGUI PG_DN &hm LCTRL HOME    &tog FN        &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT     _x_
         // |---------------|---------------|--------------|---------------|-------------|   |------------|---------------|------------|---------------|-----------------|
         // |    LSHIFT     |    Vol-;Prev  |   Mute;Play  |  Vol+;FF      |    BASE     |   |            |               |            |               |                 |
              &kp LSHIFT           &td0           &td1          &td2          &to BASE        &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT     _x_
