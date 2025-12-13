@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3.0
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     concurrency:
       group: firmware-build
       cancel-in-progress: true
@@ -19,7 +19,7 @@ jobs:
       archive_name: "zmk-chocofi-firmware"
   draw:
     needs: build
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.22.1
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
       contents: write
     with:
