@@ -116,16 +116,16 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
       // label = "HOMEROW_MODS";
       #binding-cells = <2>;
       // hold-trigger-key-positions = <TRIGGER_POS>;
-      //hold-trigger-on-release;
+      hold-trigger-on-release;
     };
     lt: layer_tap {
-      compatible = "zmk,behavior-layer-tap";
+      compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <125>;
       bindings = <&mo>, <&kp>;
-      #binding-cells = <2>;
       display-name = "Layer-Tap";
+      hold-trigger-on-release;
     };
     SBD: S_BSPC_DEL {
       compatible = "zmk,behavior-mod-morph";
@@ -182,7 +182,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
              &hml_s LSHIFT Z     &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hmr_s RSHIFT FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
-                                             &kp RETURN   &lt NUM ESC   &lt FN TAB         &mo NUM       &kp BSPC       &kp SPACE
+                                           &lt NUM TAB    &kp RETURN &lt FN ESC     &lt NUM BSPC &kp SPACE  &lt FN APOS
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
       >;
     };
@@ -199,7 +199,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // |    LSHIFT     |        `      | Search / F11 |  Dock / F12   |    BASE     |   |   None   |      =        |            |               |                 |
              &kp LSHIFT        &kp GRAVE       &kp F11         &kp F12       &to BASE            _x_       &kp EQUAL        ___             ___             ___
         // |---------------|---------------|--------------|---------------|-------------|   |----------|---------------|------------|---------------|-----------------|
-                                               &kp TAB          ___             ___              ___          ___            ___
+                                                  ___          &kp TAB            ___              ___         ___            ___
         //                                 |--------------|---------------|-------------|   |----------|---------------|------------|
       >;
     };
