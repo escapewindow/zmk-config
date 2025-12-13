@@ -31,12 +31,12 @@ layers:
   - ','
   - .
   - '&hmr_s RSHIFT FSLH'
-  - {t: '$$mdi:keyboard-tab$$', h: number}
   - ⮐
-  - {t: Esc, h: fn}
-  - {t: BSPC, h: number}
+  - {t: Esc, h: number}
+  - {t: '$$mdi:keyboard-tab$$', h: fn}
+  - number
+  - BSPC
   - $$mdi:keyboard-space$$
-  - {t: '''', h: fn}
   number:
   - '1'
   - '2'
@@ -68,8 +68,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - $$mdi:keyboard-tab$$
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,8 +142,8 @@ layers:
   - {t: '$$mdi:bluetooth-off$$', s: '2', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-off$$', s: '3', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-off$$', s: '4', type: sym_sub_text}
+  - ''
   - {type: held}
-  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - ''
