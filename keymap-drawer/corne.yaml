@@ -31,12 +31,12 @@ layers:
   - ','
   - .
   - '&hmr_s RSHIFT FSLH'
-  - ⮐
-  - {t: Esc, h: number}
-  - {t: '$$mdi:keyboard-tab$$', h: fn}
-  - number
-  - BSPC
+  - '&hml_s LSHIFT TAB'
+  - {t: ⮐, h: number}
+  - {t: Esc, h: fn}
+  - {t: BSPC, h: number}
   - $$mdi:keyboard-space$$
+  - '&hmr_s RSHIFT APOS'
   number:
   - '1'
   - '2'
