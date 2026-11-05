@@ -174,7 +174,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
                 &kp Z           &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT          &kp FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
-                                             &lt FN ESC  &lt NUM RETURN    &kp TAB         &kp BSPC      &kp SPACE     &mo NUM
+                                             &kp ESC       &kp RETURN      &mo FN         k  &mo NUM     &kp BSPC      &kp SPACE
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
       >;
     };
@@ -188,8 +188,8 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // |      \        |        -      |      [        |       ]        | Lock Layer  |   |    Left   |      Down      |      Up     |     Right     |        '        |
             &hml LALT BSLH  &hml LGUI MINUS &hml LCTRL LBKT &hml LSHIFT RBKT    &tog NUM         &kp LEFT  &hmr RSHIFT DOWN &hmr RCTRL UP &hmr RGUI RIGHT  &hmr RALT APOS
         // |---------------|---------------|---------------|----------------|-------------|   |-----------|----------------|-------------|---------------|-----------------|
-        // |   caps word   |        `      | Search / F11  |  Dock / F12    |    BASE     |   |   Repeat  |      =         |             |               |        \        |
-               &caps_word      &kp GRAVE       &kp F11          &kp F12        &to BASE        &key_repeat    &kp EQUAL          ___            ___           &kp BSLH
+        // |   caps word   |        `      | Search / F11  |  Dock / F12    |    BASE     |   |   Repeat  |      =         |             |               |                 |
+               &caps_word      &kp GRAVE       &kp F11          &kp F12        &to BASE        &key_repeat    &kp EQUAL          ___            ___              ___
         // |---------------|---------------|---------------|----------------|-------------|   |-----------|----------------|-------------|---------------|-----------------|
                                                   ___             ___            ___               ___           ___             ___
         //                                 |---------------|----------------|-------------|   |-----------|----------------|-------------|
