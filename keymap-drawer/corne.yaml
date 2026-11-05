@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne, layout_name: five_column_transform}
 layers:
   base: [Q, W, E, R, T, Y, U, I, O, P, '&hml LALT A', '&hml LGUI S', '&hml LCTRL D', '&hml LSHIFT F', G, H, '&hmr RSHIFT J', '&hmr RCTRL K', '&hmr RGUI L', '&hmr
-      RALT SEMI', Z, X, C, V, B, N, M, ',', ., /, Esc, ⮐, fn, number, BSPC, '$$mdi:keyboard-space$$']
+      RALT SEMI', Z, X, C, V, B, N, M, ',', ., /, ⮐, Esc, fn, number, BSPC, '$$mdi:keyboard-space$$']
   number:
   - '1'
   - '2'
