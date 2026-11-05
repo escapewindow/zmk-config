@@ -31,12 +31,12 @@ layers:
   - ','
   - .
   - /
-  - ⮐
-  - {t: '$$mdi:keyboard-tab$$', h: number}
   - {t: Esc, h: fn}
-  - number
+  - {t: ⮐, h: number}
+  - $$mdi:keyboard-tab$$
   - BSPC
   - $$mdi:keyboard-space$$
+  - number
   number:
   - '1'
   - '2'
@@ -58,7 +58,7 @@ layers:
   - '&hmr RCTRL UP'
   - '&hmr RGUI RIGHT'
   - '&hmr RALT APOS'
-  - ''
+  - '&caps_word'
   - '`'
   - F11
   - F12
@@ -105,9 +105,9 @@ layers:
   - $$mdi:mouse-move-up$$
   - '&msc SCRL_RIGHT'
   - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:cursor-default-click-outline$$
   - $$mdi:cursor-default-click$$
@@ -142,9 +142,9 @@ layers:
   - {t: '$$mdi:bluetooth-off$$', s: '2', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-off$$', s: '3', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-off$$', s: '4', type: sym_sub_text}
-  - ''
   - {type: held}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
   - ''
