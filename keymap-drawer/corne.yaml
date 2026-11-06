@@ -11,16 +11,16 @@ layers:
   - I
   - O
   - P
-  - '&hml LALT A'
-  - '&hml LGUI S'
-  - '&hml LCTRL D'
-  - '&hml LSHIFT F'
+  - '&hml LSHIFT A'
+  - '&hml LALT S'
+  - '&hml LGUI D'
+  - '&hml LCTRL F'
   - G
   - H
-  - '&hmr RSHIFT J'
-  - '&hmr RCTRL K'
-  - '&hmr RGUI L'
-  - '&hmr RALT SEMI'
+  - '&hmr RCTRL J'
+  - '&hmr RGUI K'
+  - '&hmr RALT L'
+  - '&hmr RSHIFT SEMI'
   - Z
   - X
   - C
@@ -48,16 +48,16 @@ layers:
   - '8'
   - '9'
   - '0'
-  - '&hml LALT BSLH'
-  - '&hml LGUI MINUS'
-  - '&hml LCTRL LBKT'
-  - '&hml LSHIFT RBKT'
+  - '&hml LSHIFT BSLH'
+  - '&hml LALT MINUS'
+  - '&hml LGUI LBKT'
+  - '&hml LCTRL RBKT'
   - {t: number, h: '$$mdi:toggle-switch$$'}
   - $$mdi:arrow-left$$
-  - '&hmr RSHIFT DOWN'
-  - '&hmr RCTRL UP'
-  - '&hmr RGUI RIGHT'
-  - '&hmr RALT APOS'
+  - '&hmr RCTRL DOWN'
+  - '&hmr RGUI UP'
+  - '&hmr RALT RIGHT'
+  - '&hmr RSHIFT APOS'
   - '&caps_word'
   - '`'
   - F11
@@ -85,10 +85,10 @@ layers:
   - F8
   - F9
   - F10
-  - '&hml LALT END'
-  - '&hml LGUI PG_DN'
-  - '&hml LCTRL PG_UP'
-  - '&hml LSHIFT HOME'
+  - '&hml LSHIFT END'
+  - '&hml LALT PG_DN'
+  - '&hml LGUI PG_UP'
+  - '&hml LCTRL HOME'
   - {t: fn, h: '$$mdi:toggle-switch$$'}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
