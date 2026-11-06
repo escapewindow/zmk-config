@@ -170,10 +170,10 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
               &kp Q            &kp W          &kp E         &kp R         &kp T             &kp Y       &kp U         &kp I          &kp O              &kp P
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
         // |     A         |      S       |     D       |      F       |     G       |   |     H     |      J       |     K       |     L        |         ;        |
-             &hml LSHIFT A    &hml LALT S   &hml LGUI D  &hml LCTRL F    &kp G             &kp H      &hmr RCTRL J   &hmr RGUI K    &hmr RALT L    &hmr RSHIFT SEMI
+                &kp A         &hml LALT S   &hml LGUI D  &hml LCTRL F    &kp G             &kp H      &hmr RCTRL J   &hmr RGUI K    &hmr RALT L         &kp SEMI
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
-                &kp Z           &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT          &kp FSLH
+             &hml LSHIFT Z      &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hmr RSHIFT FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
                                                _RET_       &kp ESC      &lt FN TAB         &mo NUM     &kp BSPC       &kp SPACE
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
@@ -187,10 +187,10 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
                &kp N1            &kp N2         &kp N3          &kp N4         &kp N5            &kp N6       &kp N7           &kp N8          &kp N9            &kp N0
         // |---------------|---------------|---------------|----------------|-------------|   |-----------|----------------|-------------|---------------|-----------------|
         // |      \        |        -      |      [        |       ]        | Lock Layer  |   |    Left   |      Down      |      Up     |     Right     |        '        |
-            &hml LSHIFT BSLH &hml LALT MINUS &hml LGUI LBKT &hml LCTRL RBKT    &tog NUM         &kp LEFT   &hmr RCTRL DOWN &hmr RGUI UP   &hmr RALT RIGHT  &hmr RSHIFT APOS
+            &hml LSHIFT BSLH &hml LALT MINUS &hml LGUI LBKT &hml LCTRL RBKT    &tog NUM         &kp LEFT   &hmr RCTRL DOWN &hmr RGUI UP   &hmr RALT RIGHT  &kp APOS
         // |---------------|---------------|---------------|----------------|-------------|   |-----------|----------------|-------------|---------------|-----------------|
-        // |   caps word   |        `      | Search / F11  |  Dock / F12    |    BASE     |   |   Repeat  |      =         |             |               |                 |
-               &caps_word      &kp GRAVE       &kp F11          &kp F12        &to BASE        &key_repeat    &kp EQUAL          ___            ___              ___
+        // |    shift      |        `      | Search / F11  |  Dock / F12    |    BASE     |   |   Repeat  |      =         |             |               |        /        |
+              &kp LSHIFT      &kp GRAVE       &kp F11          &kp F12         &to BASE        &key_repeat    &kp EQUAL          ___            ___        &mt RSHIFT FSLH
         // |---------------|---------------|---------------|----------------|-------------|   |-----------|----------------|-------------|---------------|-----------------|
                                                   ___             ___            ___               ___           ___             ___
         //                                 |---------------|----------------|-------------|   |-----------|----------------|-------------|
@@ -206,8 +206,8 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // |     End       |      PgUp     |     PgDn       |     Home       | Lock Layer  |   | Mouse Left   |  Mouse Down   |  Mouse Up  |  Mouse Right  |                 |
             &hml LSHIFT END &hml LALT PG_DN &hml LGUI PG_UP  &hml LCTRL HOME    &tog FN         &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP &mmv MOVE_RIGHT     _x_
         // |---------------|---------------|----------------|----------------|-------------|   |--------------|---------------|------------|---------------|-----------------|
-        // |    None       |    Vol-;Prev  |   Mute;Play    |   Vol+;FF      |    BASE     |   |              |               |            |               |                 |
-                _x_              &td0           &td1             &td2          &to BASE         &msc SCRL_LEFT &msc SCRL_DOWN  &msc SCRL_UP &msc SCRL_RIGHT     _x_
+        // |   caps word   |    Vol-;Prev  |   Mute;Play    |   Vol+;FF      |    BASE     |   |              |               |            |               |                 |
+              &caps_word          &td0           &td1             &td2          &to BASE         &msc SCRL_LEFT &msc SCRL_DOWN  &msc SCRL_UP &msc SCRL_RIGHT     _x_
         // |---------------|---------------|----------------|----------------|-------------|   |--------------|---------------|------------|---------------|-----------------|
                                                   ___              ___            ___                 ___         &mkp RCLK     &mkp LCLK
         //                                 |----------------|----------------|-------------|   |--------------|---------------|------------|
