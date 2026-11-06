@@ -1,7 +1,42 @@
 layout: {zmk_keyboard: corne, layout_name: five_column_transform}
 layers:
-  base: [Q, W, E, R, T, Y, U, I, O, P, '&hml LALT A', '&hml LGUI S', '&hml LCTRL D', '&hml LSHIFT F', G, H, '&hmr RSHIFT J', '&hmr RCTRL K', '&hmr RGUI L', '&hmr
-      RALT SEMI', Z, X, C, V, B, N, M, ',', ., /, ⮐, Esc, fn, number, BSPC, '$$mdi:keyboard-space$$']
+  base:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '&hml LALT A'
+  - '&hml LGUI S'
+  - '&hml LCTRL D'
+  - '&hml LSHIFT F'
+  - G
+  - H
+  - '&hmr RSHIFT J'
+  - '&hmr RCTRL K'
+  - '&hmr RGUI L'
+  - '&hmr RALT SEMI'
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - ⮐
+  - Esc
+  - {t: '$$mdi:keyboard-tab$$', h: fn}
+  - number
+  - BSPC
+  - $$mdi:keyboard-space$$
   number:
   - '1'
   - '2'
@@ -51,8 +86,8 @@ layers:
   - F9
   - F10
   - '&hml LALT END'
-  - '&hml LGUI PG_UP'
-  - '&hml LCTRL PG_DN'
+  - '&hml LGUI PG_DN'
+  - '&hml LCTRL PG_UP'
   - '&hml LSHIFT HOME'
   - {t: fn, h: '$$mdi:toggle-switch$$'}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
