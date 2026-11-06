@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #include <behaviors.dtsi>
-#include <behaviors/mouse_keys.dtsi>
 
 #include "zmk-helpers/helper.h"
 #include "keys/36.h"
