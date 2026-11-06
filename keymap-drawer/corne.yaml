@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - P
-  - '&hml LSHIFT A'
+  - A
   - '&hml LALT S'
   - '&hml LGUI D'
   - '&hml LCTRL F'
@@ -20,8 +20,8 @@ layers:
   - '&hmr RCTRL J'
   - '&hmr RGUI K'
   - '&hmr RALT L'
-  - '&hmr RSHIFT SEMI'
-  - Z
+  - ;
+  - '&hml LSHIFT Z'
   - X
   - C
   - V
@@ -30,7 +30,7 @@ layers:
   - M
   - ','
   - .
-  - /
+  - '&hmr RSHIFT FSLH'
   - ⮐
   - Esc
   - {t: '$$mdi:keyboard-tab$$', h: fn}
@@ -57,8 +57,8 @@ layers:
   - '&hmr RCTRL DOWN'
   - '&hmr RGUI UP'
   - '&hmr RALT RIGHT'
-  - '&hmr RSHIFT APOS'
-  - '&caps_word'
+  - ''''
+  - $$mdi:apple-keyboard-shift$$
   - '`'
   - F11
   - F12
@@ -67,7 +67,7 @@ layers:
   - '='
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: /, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -95,7 +95,7 @@ layers:
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
   - ''
-  - ''
+  - '&caps_word'
   - '&td0'
   - '&td1'
   - '&td2'
